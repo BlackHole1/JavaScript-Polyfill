@@ -1,0 +1,2 @@
+# JavaScript-Polyfill
+参考MDN上的Polyfill实现方式，在此基础上增加注释以及自己的想法
