@@ -26,18 +26,10 @@ if (!Array.prototype.forEach) {
     // 把当前的this强转为Object对象。为了防止 [].forEach.call("abc", cb) 的写法而造成的错误
     thisObj = Object(this)
 
-    // 如果没有指定回调函数的this指向，那就默认为thisObj
-    // MDN上的实现方式在这一块有点问题，如下：
-    /**
-     * if (arguments.length > 1) {
-     *  callbackSelf = thisArg;
-     * }
-     */
-    //
-    // 这里的实现方式，如果没有填写，或者填写null、undefined时，this指向将会指向全局
-    // 在JS中，如果call或者apply或者bind的第一个this指向参数为null或undefined时
-    // 那么函数内部的this指向将会是window或global(这里取决于你当前环境是在浏览器下还是Nodejs下)
-    callbackSelf = thisArg || thisObj
+    // 如果指定回调函数的this指向，那么回调函数的第二个参数将被当做this传进去
+    if (arguments.length > 1) {
+      callbackSelf = thisArg;
+    }
 
     // 先说明一下>>>位操作符
     // 1. 所有非数值转换成0
@@ -82,7 +74,9 @@ if (false) {  // 无注释版本
     }
 
     thisObj = Object(this)
-    callbackSelf = thisArg || thisObj
+    if (arguments.length > 1) {
+      callbackSelf = thisArg;
+    }
     len = thisObj.length >>> 0
 
     while (i < len) {
