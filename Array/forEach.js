@@ -13,23 +13,24 @@ if (!Array.prototype.forEach) {
 
     // 这里的相当于 (this === null || this === undefined)
     // 因为 null == undefined 结果返回的是true，这样就可以使用一个判断来代替两个判断了
-    // 当使用 [].forEach(cb) 和 [].forEach.call(null, cb) 的时候，下面的判断就会被触发。
+    // 当使用操作数组为空时 或 [].forEach.call(null, cb) 的时候，下面的判断就会被触发。
     // [].forEach(cb) 这时的this是undefined, [].forEach.call(null, cb) 时this是null
     if (this == null) {
       return new TypeError('this not defined')
     }
-
-    if (typeof callback !== 'function') { // 判断回调函数是否为函数对象
+    
+    // 判断回调函数是否为函数对象
+    if (typeof callback !== 'function') {
       return new TypeError(callback + 'is not function')
     }
-
-    // 把当前的this强转为Object对象。为了防止 [].forEach.call("abc", cb) 的写法而造成的错误
-    thisObj = Object(this)
 
     // 如果指定回调函数的this指向，那么回调函数的第二个参数将被当做this传进去
     if (arguments.length > 1) {
       callbackSelf = thisArg;
     }
+
+    // 把当前的this强转为Object对象。为了防止 [].forEach.call("abc", cb) 的写法而造成的错误
+    thisObj = Object(this)
 
     // 先说明一下>>>位操作符
     // 1. 所有非数值转换成0
@@ -72,11 +73,11 @@ if (false) {  // 无注释版本
     if (typeof callback !== 'function') {
       return new TypeError(callback + 'is not function')
     }
-
-    thisObj = Object(this)
     if (arguments.length > 1) {
       callbackSelf = thisArg;
     }
+
+    thisObj = Object(this)
     len = thisObj.length >>> 0
 
     while (i < len) {

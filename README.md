@@ -7,3 +7,4 @@
 | 函数 | 其他说明 |
 | --- | ---
 | [forEach](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/Array/forEach.js) | 无
+| [map](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/Array/map.js) | 无
