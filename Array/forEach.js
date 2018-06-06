@@ -4,6 +4,7 @@ if (!Array.prototype.forEach) {
    * @author Black-Hole 158blackhole#gmail.com
    * @param {Function} callback 为数组中每个元素执行的函数 (接收三个参数: 当前值、当前数组下标、当前正在操作的数组)
    * @param {Any} [thisArg] 回调函数的this值
+   * @returns {Array}
    */
   Array.prototype.forEach = function (callback, thisArg) {
     var callbackSelf  // 回调函数的this指向
@@ -16,12 +17,12 @@ if (!Array.prototype.forEach) {
     // 当使用操作数组为空时 或 [].forEach.call(null, cb) 的时候，下面的判断就会被触发。
     // [].forEach(cb) 这时的this是undefined, [].forEach.call(null, cb) 时this是null
     if (this == null) {
-      return new TypeError('this not defined')
+      throw new TypeError('this not defined')
     }
     
     // 判断回调函数是否为函数对象
     if (typeof callback !== 'function') {
-      return new TypeError(callback + 'is not function')
+      throw new TypeError(callback + 'is not function')
     }
 
     // 如果指定回调函数的this指向，那么回调函数的第二个参数将被当做this传进去
@@ -68,10 +69,10 @@ if (false) {  // 无注释版本
     var callbackSelf, thisObj, i = 0, len
 
     if (this == null) {
-      return new TypeError('this not defined')
+      throw new TypeError('this not defined')
     }
     if (typeof callback !== 'function') {
-      return new TypeError(callback + 'is not function')
+      throw new TypeError(callback + 'is not function')
     }
     if (arguments.length > 1) {
       callbackSelf = thisArg;
