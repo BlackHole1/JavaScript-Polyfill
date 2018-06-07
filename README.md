@@ -13,3 +13,9 @@
 | [forEach](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/Array/forEach.js) | 无
 | [map](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/Array/map.js) | 无
 | [from](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/Array/from.js) | 无
+
+## Object
+
+| 函数 | 其他说明 |
+| --- | ---
+| [keys](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/Object/keys.js) | 无
