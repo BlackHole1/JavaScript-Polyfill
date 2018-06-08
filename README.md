@@ -13,6 +13,7 @@
 | [forEach](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/Array/forEach.js) | 无
 | [map](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/Array/map.js) | 无
 | [from](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/Array/from.js) | 无
+| [of](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/Array/of.js) | 无
 
 ## Object
 
