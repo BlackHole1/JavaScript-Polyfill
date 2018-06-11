@@ -4,7 +4,7 @@ if (!Object.keys) {
     var hasOwnProperty = Object.hasOwnProperty
 
     // 判断 ({toString: null}) 对象中是否存在可枚举的toString属性
-    // IE低版本浏览器(低于8版本，可能包含8)，会返回fasle(取反前)，而标准浏览器会返回true(去饭钱)
+    // IE低版本浏览器(低于8版本，可能包含8)，会返回fasle(取反前)，而标准浏览器会返回true(去反前)
     // 所以，如果是IE低版本浏览器，下面的代码将返回true，也就验证了存在此bug
     // 详情可以移步到: http://www.cnblogs.com/tarol/p/4350965.html
     var hasDontEnumBug = !({toString: null}).propertyIsEnumerable('toString')
