@@ -1,3 +1,7 @@
+// some、every、filter、map、forEach其实是很相像的。他们的Polyfill实现也是十分相似
+// some: 当数组中有一个元素在回调函数里返回true，那则返回true。只有当全部元素返回false，才返回false
+// every: 当数组中有一个元素通过回调函数返回false，则返回false。只有当全部元素返回true，才返回true
+// filter: 返回数组中满足条件的元素 (通过回调函数返回true的元素)
 if (!Array.prototype.every) {
   /**
    * 测试数组的所有元素是否都通过了指定函数的测试
@@ -44,7 +48,7 @@ if (!Array.prototype.every) {
       // 这里的1和3之间是有空白的地方，当转换成对象时，i将没有2这个值，所以可以通过if...in来避免这个错误
       if (i in thisObj) {
         // 把值交给回调函数进行操作，如果回调函数里有一个返回false，那么取反后就是true。那么every这个方法就将返回false
-        if (!fn(thisArg, thisObj[i], i, thisObj)) {
+        if (!fn.call(thisArg, thisObj[i], i, thisObj)) {
           return false
         }
       }
@@ -81,7 +85,7 @@ if (false) {  // 无注释版本
 
     while (i < len) {
       if (i in thisObj) {
-        if (!fn(thisArg, thisObj[i], i, thisObj)) {
+        if (!fn.call(thisArg, thisObj[i], i, thisObj)) {
           return false
         }
       }
