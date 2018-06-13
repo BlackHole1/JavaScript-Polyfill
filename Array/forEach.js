@@ -1,3 +1,7 @@
+// some、every、filter、map、forEach其实是很相像的。他们的Polyfill实现也是十分相似
+// some: 当数组中有一个元素在回调函数里返回true，那则返回true。只有当全部元素返回false，才返回false
+// every: 当数组中有一个元素通过回调函数返回false，则返回false。只有当全部元素返回true，才返回true
+// filter: 返回数组中满足条件的元素 (通过回调函数返回true的元素)
 if (!Array.prototype.forEach) {
   /**
    * forEach的Polyfill实现
