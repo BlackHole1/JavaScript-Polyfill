@@ -17,6 +17,7 @@
 | [isArray](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/Array/isArray.js) | 无
 | [includes](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/Array/includes.js) | 无
 | [every](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/Array/every.js) | 无
+| [some](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/Array/some.js) | 无
 
 ## Object
 
