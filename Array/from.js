@@ -83,24 +83,19 @@ if (!Array.from) {
         throw new TypeError('arrayList is null or undefined')
       }
 
-      // 如果存在第二个参数(回调函数)，就把回调函数赋值到callback变量上
+      // 如果存在第二个参数(回调函数)
       if (arguments.length > 1) {
         callback = arguments[1]
-      }
 
-      // 如果callback不等于undefined
-      // 因为当你调用from函数，而只有一个传参时，callback是为undefined。
-      // 借此，可以判断第二参数是否有效
-      if (typeof callback !== 'undefined') {
         // 判断callback是否为函数
         if (!isFun(callback)) {
           throw new TypeError('callback in not function')
         }
+      }
 
-        // 当第二个参数有效时，再判断是否有第三个参数(回调函数的this指向)
-        if (arguments.length > 2) {
-          callbackSelf = arguments[2]
-        }
+      // 当第二个参数有效时，再判断是否有第三个参数(回调函数的this指向)
+      if (arguments.length > 2) {
+        callbackSelf = arguments[2]
       }
 
       item = Object(arrayList)  // 对传入的array-like进行强转，统一类型，方便处理
@@ -182,15 +177,13 @@ if (false) {  // 无注释版本
 
       if (arguments.length > 1) {
         callback = arguments[1]
-      }
-
-      if (typeof callback !== 'undefined') {
         if (!isFun(callback)) {
           throw new TypeError('callback in not function')
         }
-        if (arguments.length > 2) {
-          callbackSelf = arguments[2]
-        }
+      }
+
+      if (arguments.length > 2) {
+        callbackSelf = arguments[2]
       }
 
       item = Object(arrayList)
