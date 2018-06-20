@@ -38,7 +38,7 @@ if (!Array.prototype.find) {
       while (i < len) {
         // 这里对[1,,2,3]这种类型的数组没有进行 if..in判断，看了下具体的实现，原生的js也没有判断，而是直接代入
         // 这款可以看Array下的map实现代码
-        if (callback(thisArg, thisObj[i], i, thisObj)) {
+        if (callback.call(thisArg, thisObj[i], i, thisObj)) {
           return thisObj[i]
         }
         i++
@@ -72,7 +72,7 @@ if (false) {  // 无注释版本
       len = thisObj.length >>> 0
 
       while (i < len) {
-        if (callback(thisArg, thisObj[i], i, thisObj)) {
+        if (callback.call(thisArg, thisObj[i], i, thisObj)) {
           return thisObj[i]
         }
         i++
