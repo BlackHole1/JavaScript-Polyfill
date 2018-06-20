@@ -1,6 +1,13 @@
 if (!Array.prototype.find) {
   Object.defineProperty(Array.prototype, 'find', {
-    value: function (callback) {
+    /**
+     * find的核心代码
+     * 返回数组中满足提供的测试函数的第一个元素的值
+     * @param callback {Function} 回调函数
+     * @param thisArg {Any} 回调函数里的this指向
+     * @returns {Any} 返回匹配到的数组值
+     */
+    value: function (callback, /* thisArg */) {
       var thisObj   // 把this强转到Object后的值
       var len // 数组对象的长度
       var thisArg // 存放第二个参数(回填函数的this)
