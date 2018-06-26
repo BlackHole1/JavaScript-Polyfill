@@ -13,7 +13,7 @@ if (!Array.prototype.forEach) {
   Array.prototype.forEach = function (callback, thisArg) {
     var callbackSelf  // 回调函数的this指向
     var thisObj // 把this强转成Object对象
-    var i = 0// while循环变量
+    var i = 0 // while循环变量
     var len // 数组长度
 
     // 这里的相当于 (this === null || this === undefined)
