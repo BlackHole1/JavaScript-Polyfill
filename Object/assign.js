@@ -2,12 +2,13 @@
 if (typeof Object.assign !== 'function') {
   // 使用defineProperty进行赋值，因为assign属性是不可遍历的，需要使用defineProperty里的enumerable属性来达到效果
   Object.defineProperty(Object, 'assign', {
-      /**
-   * 将所有可枚举属性的值从一个或多个源对象复制到目标对象
-   * @param {Object} target 目标对象
-   * @param {Object} varArgs 此参数不代表一个参数，而是代表多个参数，相当于ES6的...varArgs
-   * @returns {Object}
-   */
+    /**
+     * 将所有可枚举属性的值从一个或多个源对象复制到目标对象
+     * @param {Object} target 目标对象
+     * @param {Object} varArgs 此参数不代表一个参数，而是代表多个参数，相当于ES6的...varArgs
+     * @returns {Object}
+     */
+    // 需要注意的是，在原始实现中，assign是可以拷贝Symbol对象的，但是由于ES5没有Symbol对象，所以这里并没有实现
     value: function (target, varArgs) {
       var targetObj // 用于存放强转Object对象的target
       var currentArg // 当前参数
