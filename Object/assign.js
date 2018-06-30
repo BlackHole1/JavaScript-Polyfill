@@ -52,7 +52,7 @@ if (typeof Object.assign !== 'function') {
   })
 }
 
-if (typeof Object.assign !== 'function') {  // 无注释版本
+if (false) {  // 无注释版本
   Object.defineProperty(Object, 'assign', {
     value: function (target, varArgs) {
       var targetObj
