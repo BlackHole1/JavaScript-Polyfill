@@ -28,3 +28,4 @@
 | --- | ---
 | [keys](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/Object/keys.js) | 无
 | [assign](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/Object/assign.js) | 无
+| [create](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/Object/create.js) | 无
