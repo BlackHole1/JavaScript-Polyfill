@@ -21,6 +21,7 @@
 | [filter](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/Array/filter.js) | 无
 | [find](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/Array/find.js) | 无
 | [findIndex](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/Array/findIndex.js) | 无
+| [slice](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/Array/silice.js)
 
 ## Object
 
