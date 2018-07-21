@@ -66,7 +66,7 @@ if (!Array.prototype.map) {
   }
 }
 
-if (false) {
+if (false) {  // 无注释版本
   Array.prototype.map = function (callback, thisArg) {
     var callbackSelf, newArr = [], thisObj, i = 0, len
 
