@@ -32,3 +32,9 @@
 | [assign](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/Object/assign.js) | 无
 | [create](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/Object/create.js) | 无
 | [is](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/Object/is.js) | 无
+
+## String
+
+| 函数 | 其他说明 |
+| --- | ---
+| [endsWith](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/String/endsWith.js) | 无
