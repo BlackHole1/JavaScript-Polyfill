@@ -38,4 +38,4 @@
 | 函数 | 其他说明 |
 | --- | ---
 | [endsWith](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/String/endsWith.js) | 无
-| [startsWith](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/String/startsWith.js)
+| [startsWith](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/String/startsWith.js) | 无
