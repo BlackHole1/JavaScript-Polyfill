@@ -39,4 +39,4 @@
 | --- | ---
 | [endsWith](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/String/endsWith.js) | 无
 | [startsWith](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/String/startsWith.js) | 无
-| [includes](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/String/includes.js)
+| [includes](https://github.com/BlackHole1/JavaScript-Polyfill/blob/master/String/includes.js) | 无
